@@ -1,0 +1,9 @@
+C:\Users\xavi\source\repos\CanalCocina\bin\Debug\CanalCocina3.pdb
+C:\Users\xavi\source\repos\CanalCocina\bin\Debug\HtmlAgilityPack.dll
+C:\Users\xavi\source\repos\CanalCocina\obj\Debug\CanalCocina.csprojAssemblyReference.cache
+C:\Users\xavi\source\repos\CanalCocina\obj\Debug\CanalCocina.csproj.CoreCompileInputs.cache
+C:\Users\xavi\source\repos\CanalCocina\obj\Debug\CanalCocina.csproj.CopyComplete
+C:\Users\xavi\source\repos\CanalCocina\obj\Debug\CanalCocina3.pdb
+C:\Users\xavi\source\repos\CanalCocina\bin\Debug\CanalCocina3.xml
+C:\Users\xavi\source\repos\CanalCocina\bin\Debug\CanalCocina3.dll
+C:\Users\xavi\source\repos\CanalCocina\obj\Debug\CanalCocina3.dll

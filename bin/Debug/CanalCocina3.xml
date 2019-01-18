@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CanalCocina3</name>
+    </assembly>
+    <members>
+        <member name="M:CanalCocina3.CanalCocina.GetRawHtmlPageProgramation(System.DateTime)">
+            <summary>
+            pel dia indicat instancia una nova clase HttpDownloader amb codificació utf-8
+            </summary>
+            <param name="day"></param>
+            <returns>obté una string amb tot el codi html de la pàgina web</returns>
+        </member>
+        <member name="M:CanalCocina3.CanalCocina.Get(System.DateTime)">
+            <summary>
+            Aquest mètode obté una data i crida a un altre metode de la clase que li donarà la programació
+            </summary>
+            <param name="day">Una data</param>
+            <returns>Retorna una llista de cla classe Program amb la informació que ha obtingut de la pàgina web</returns>
+        </member>
+        <member name="M:CanalCocina3.CanalCocina.GetProgramsFromHtml(System.String,System.DateTime)">
+            <summary>
+            Donat el codi html, obté tota la col·lecció de nodes divs que estan dins del node section
+            </summary>
+            <param name="htmlContent"></param>
+            <param name="baseday"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CanalCocina3.CanalCocina.CreateProgramFromHtmlNode(HtmlAgilityPack.HtmlNode,System.DateTime)">
+            <summary>
+            Per cada un dels divs dins la clase section, agafa els nodes on hi ha informació sobre el programa i mira que la informació sigui correcta
+            </summary>
+            <param name="htmlnode">un div dins de la clase section</param>
+            <param name="basedate">dta del dia elegit</param>
+            <returns>Retorna una clase Program</returns>
+        </member>
+        <member name="M:CanalCocina3.HttpDownloader.GetPage">
+            <summary>
+            Afegeix als headers que obté de la sol·licitud, el header Accept Encoding amb els valors gzip,deflate, i dona a this.headers,this.url la repsosta del headers i la Uri
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CanalCocina3.HttpDownloader.ProcessContent(System.Net.HttpWebResponse)">
+            <summary>
+            Per la repsosta obtinguda, descomprimeix el gzip i llegeix el codi html i el posa en un string amb la codificació corresponent
+            </summary>
+            <param name="response">La resposta que ha obtingut de la pàgina web</param>
+            <returns>una string amb tot el codi html</returns>
+        </member>
+        <member name="M:CanalCocina3.HttpDownloader.SetEncodingFromHeader(System.Net.HttpWebResponse)">
+            <summary>
+            Obté la resposta de la web i si la codificació no es correcta ho arregla
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:CanalCocina3.HttpDownloader.CheckMetaCharSetAndReEncode(System.IO.Stream,System.String)">
+            <summary>
+            Si obté una codificació no desitjada, tornar a codificar el codi
+            </summary>
+            <param name="memStream">Seqüencia de bytes</param>
+            <param name="html">el codi html de la pàgina web</param>
+            <returns>torna el codi html codificat correctament</returns>
+        </member>
+    </members>
+</doc>
